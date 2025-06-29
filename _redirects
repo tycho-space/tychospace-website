@@ -1,0 +1,10 @@
+# Remove .html das URLs e faz redirecionamento permanente
+/*.html  /:splat  301!
+
+# Serve os arquivos .html quando a URL sem extensão é acessada
+/*  /:splat.html  200
+
+
+# Regras genéricas para qualquer profundidade (opcional)
+/*/*.html     /:dir/:splat  301!
+/*/*          /:dir/:splat.html  200
